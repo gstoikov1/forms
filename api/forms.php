@@ -10,7 +10,7 @@ $userId = require_login_json();
 
 $pdo = db();
 
-$stmt = $pdo->prepare("SELECT name, requires_code, code, owner_id
+$stmt = $pdo->prepare("SELECT name, requires_code, code, owner_id, id
                        FROM forms
                        WHERE owner_id = ? ");
 $stmt->execute([$userId]);

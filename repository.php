@@ -20,7 +20,7 @@ class Repository
         $stmtQuestions->execute([$id]);
         $questions = $stmtQuestions->fetchAll();
 
-        $stmtOptions = $pdo->prepare("SELECT id, option_text, option_order FROM question_options WHERE question_id = ? ORDER BY option_order ASC");
+        $stmtOptions = $pdo->prepare("SELECT id, option_text, option_order, question_id FROM question_options WHERE question_id = ? ORDER BY option_order ASC");
 
         $optionsByQuestionId = [];
         foreach ($questions as $q) {

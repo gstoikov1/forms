@@ -40,7 +40,14 @@ if ($formId <= 0) {
     <p id="status">Loading…</p>
     <pre id="debug" class="hidden"></pre>
 </div>
+<div id = "form">
+    <div id="title">
 
+    </div>
+    <div id="questions">
+
+    </div>
+</div>
 <script>
     const formId = <?= $formId ?>;
 
@@ -79,6 +86,24 @@ if ($formId <= 0) {
         statusEl.textContent = 'Loaded.';
         debugEl.classList.remove('hidden');
         debugEl.textContent = JSON.stringify(data, null, 2);
+
+        //------------------FORM----------------
+        const form = data.data;
+        //console.log(form);
+
+        const title = document.querySelector('#title');
+        //console.log(form.form.name)
+        title.textContent = form.form.name;
+
+        const questionsEl = document.querySelector('#questions')
+        const questionOptions = form.questionOptions;
+        console.log(questionOptions);
+        form.questions.forEach(question => {
+            const div = document.createElement('div');
+            div.innerHTML = question.question_text;
+            questionsEl.appendChild(div);
+            console.log (question.id, questionOptions[question.id]);
+        })
     }
 
     codeBtnEl.addEventListener('click', async () => {
