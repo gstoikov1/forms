@@ -10,7 +10,7 @@ $raw = file_get_contents('php://input');
 $body = json_decode($raw, true);
 
 $formId = (int)($body['form_id'] ?? 0);
-$code   = trim((string)($body['code'] ?? ''));
+$code = trim((string)($body['code'] ?? ''));
 
 if ($formId <= 0 || strlen($code) !== 5) {
     http_response_code(400);

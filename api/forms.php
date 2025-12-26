@@ -18,5 +18,5 @@ $stmt->execute([$userId]);
 $forms = $stmt->fetchAll();
 
 echo json_encode([
-  'forms' => $forms
+    'forms' => $forms
 ]);

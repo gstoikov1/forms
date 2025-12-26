@@ -5,8 +5,10 @@ require_once __DIR__ . '/config.php';
 
 class Repository
 {
-    private function __construct() {
+    private function __construct()
+    {
     }
+
     public static function getFormById(int $id): array|null
     {
         $pdo = db();
@@ -55,12 +57,21 @@ class Repository
         }
     }
 
-    public static function loginUser(string $login, string $pass): mixed {
+    public static function loginUser(string $login, string $pass): mixed
+    {
         $pdo = db();
         $stmt = $pdo->prepare("SELECT id, username, email, password_hash FROM users WHERE username = ? OR email = ? LIMIT 1");
         $stmt->execute([$login, $login]);
         $user = $stmt->fetch();
         return ($user && password_verify($pass, $user['password_hash'])) ? $user : null;
+    }
+
+    public static function formExistsById(int $formId) : bool
+    {
+        $pdo = db();
+        $stmt = $pdo->prepare("SELECT id FROM forms WHERE id = ? LIMIT 1");
+        $stmt->execute([$formId]);
+        return $stmt->rowCount() > 0;
     }
 
 }

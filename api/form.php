@@ -8,9 +8,9 @@ header('Content-Type: application/json');
 
 $formId = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 if ($formId <= 0) {
-  http_response_code(400);
-  echo json_encode(['error' => 'Invalid form id']);
-  exit;
+    http_response_code(400);
+    echo json_encode(['error' => 'Invalid form id']);
+    exit;
 }
 
 $data = Repository::getFormById($formId);
@@ -28,8 +28,8 @@ if ($hasAccess) {
         'data' => $data,
         'session_test' => [
             'logged_in' => !empty($_SESSION['user_id']),
-            'user_id'   => $_SESSION['user_id'] ?? null,
-            'username'  => $_SESSION['username'] ?? null,
+            'user_id' => $_SESSION['user_id'] ?? null,
+            'username' => $_SESSION['username'] ?? null,
         ]
     ]);
 } else {

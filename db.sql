@@ -54,6 +54,21 @@ CREATE TABLE IF NOT EXISTS question_options (
   UNIQUE KEY uq_question_option_order (question_id, option_order)
 );
 
+CREATE TABLE IF NOT EXISTS forms_filled(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    form_id INT NOT NULL,
+    FOREIGN KEY (form_id) REFERENCES forms(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS responses(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    form_filled_id INT NOT NULL,
+    FOREIGN KEY (form_filled_id) REFERENCES forms_filled(id) ON DELETE CASCADE,
+    question_id INT NOT NULL,
+    FOREIGN KEY (question_id) REFERENCES questions(id) ON DELETE CASCADE,
+    response_text VARCHAR(255) NOT NULL
+);
+
 # -- Helpful for queries like "get questions for form ordered"
 # CREATE INDEX idx_questions_form_order ON questions(form_id, question_order);
 # CREATE TABLE IF NOT EXISTS question_options (
