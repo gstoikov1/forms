@@ -1,0 +1,69 @@
+.register-card {
+  background-color: var(--color-white);
+  padding: var(--space-32);
+  width: 100%;
+  max-width: var(--card-max-width);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin: 0px auto;
+  align-self: center;
+}
+
+.register-card h1 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-32);
+}
+
+.form-group {
+  margin-bottom: var(--space-16);
+  text-align: left;
+}
+
+.form-group input {
+  width: 100%;
+  padding: var(--space-12) var(--space-16);
+  border: 1px solid #ddd;
+  background-color: var(--color-input-bg);
+  border-radius: 4px;
+  font-size: var(--font-size-md);
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+}
+
+.btn-register {
+  width: 100%;
+  padding: var(--space-12);
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 4px;
+  font-weight: var(--weight-bold);
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  margin-top: var(--space-8);
+
+  &:hover {
+    background-color: var(--color-secondary-hover);
+  }
+}
+
+.login-link {
+  display: block;
+  margin-top: var(--space-24);
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.login-link span {
+  color: var(--color-secondary);
+  font-weight: var(--weight-semibold);
+}

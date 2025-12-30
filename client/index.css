@@ -1,0 +1,56 @@
+:root {
+  --color-main: #540863;
+  --color-secondary: #92487A;
+  --color-secondary-hover: #753A62;
+  --color-accent: #E49BA6;
+  --color-white: #FFFFFF;
+  --color-highlight: #FFD3D5;
+
+  --color-input-bg: #E8E8E8;
+
+  --text-dark: #212121;
+  --text-light: #FFFFFF;
+
+  --color-error: #D32F2F;     
+  --color-success: #388E3C;
+
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-28: 28px;
+  --space-32: 32px;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-xxl: 32px;
+
+  --font-weight-md: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --card-max-width: 400px;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-container {
+  background-color: var(--color-highlight);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
