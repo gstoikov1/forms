@@ -17,7 +17,7 @@ require_login();
     <header class="main-header">
         <div class="header-left">
             <h1 class="project-title">PuffinForms</h1>
-            <a href="/forms/create-form.php" class="btn btn-secondary">Create Form</a>
+            <a href="/forms/client/createForm/create-form.php" class="btn btn-secondary">Create Form</a>
         </div>
         
         <div class="header-right">
