@@ -1,0 +1,214 @@
+.fullWidth {
+    width: 100%;
+}
+
+.builder-container {
+  max-width: 800px;
+  margin: var(--space-32) auto;
+  padding: 0 var(--space-16);
+}
+
+.builder-section input[type="text"],
+.builder-section input[type="number"],
+.builder-section select {
+  padding: var(--space-12) var(--space-16);
+  border: 1px solid #ddd;
+  background-color: var(--color-input-bg);
+  border-radius: 4px;
+  font-size: var(--font-size-md);
+  box-sizing: border-box;
+}
+
+.builder-section input:focus,
+.builder-section select:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 2px rgba(146, 72, 122, 0.1);
+}
+
+.builder-section label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+  display: block;
+}
+
+.builder-section input:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.builder-section {
+  background-color: var(--color-white);
+  padding: var(--space-24);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  margin-bottom: var(--space-24);
+}
+
+.builder-section h2 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-16);
+  color: var(--color-main);
+}
+
+.input-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.input-div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+
+.btn-dashed {
+  width: 100%;
+  padding: var(--space-16);
+  background: transparent;
+  border: 2px dashed var(--color-accent);
+  border-radius: 8px;
+  color: var(--color-secondary);
+  font-weight: var(--weight-bold);
+  cursor: pointer;
+  margin-bottom: var(--space-24);
+  transition: all 0.2s ease;
+}
+
+.btn-dashed:hover {
+  background-color: var(--color-surface);
+  border-color: var(--color-secondary);
+}
+
+pre#output {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: var(--space-16);
+  border-radius: 8px;
+  font-size: var(--font-size-sm);
+  overflow-x: auto;
+}
+
+.builder-header {
+  margin-bottom: var(--space-24);
+}
+
+.builder-header h1 {
+  color: var(--color-main);
+}
+
+.builder-header p {
+  color: var(--text-secondary);
+}
+
+.settings-row {
+  display: flex; 
+  flex-direction: row; 
+  gap: var(--space-24); 
+  align-items: flex-end;
+}
+
+.flex-1 { flex: 1; }
+.flex-2 { flex: 2; }
+
+.question-header {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: var(--space-16);
+}
+
+.q-order-box { 
+  width: 80px; 
+}
+
+.options-container {
+  margin-top: var(--space-20); 
+  padding-top: var(--space-16); 
+  border-top: 1px dashed #ddd;
+}
+
+.options-title {
+  font-weight: var(--weight-bold);
+  display: block;
+  margin-bottom: var(--space-8);
+}
+
+.opt-row {
+  display: flex; 
+  gap: 8px; 
+  margin-bottom: 8px; 
+  align-items: center;
+}
+
+.builder-footer-actions {
+  display: flex; 
+  gap: var(--space-12); 
+  margin-bottom: var(--space-16);
+}
+
+.builder-footer-info {
+  font-size: var(--font-size-sm); 
+  color: var(--text-secondary); 
+  margin-bottom: var(--space-16);
+}
+
+.remove-q-btn { 
+  background-color: var(--color-error); 
+  color: white; 
+  border: none;
+  width: min-content; 
+  text-wrap: nowrap;
+}
+
+.remove-q-btn:hover { 
+  background-color: #b71c1c; 
+}
+
+#saveStatus { 
+  font-weight: var(--weight-semibold); 
+  margin-top: var(--space-12); 
+  text-align: center;
+}
+
+.opt-row {
+    display: flex; 
+    gap: 12px; 
+    margin-bottom: 16px; 
+    align-items: flex-end;
+}
+
+.opt-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.opt-check-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-field-container {
+  padding: var(--space-8) var(--space-16);
+  border: 1px solid #ddd;
+  background-color: var(--color-input-bg);
+  border-radius: 4px;
+  font-size: var(--font-size-md);
+  box-sizing: border-box;
+}
+
+.opt-check-field input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--color-secondary);
+}
